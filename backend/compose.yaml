@@ -1,9 +1,9 @@
 
 
 services:
-  web:
-    container_name: api-backend-ldla-dev
-    image: image-api-backend-ldla-dev
+  api:
+    container_name: backend-lmarti-web-development-fullstack-docker
+    image: image-backend-lmarti-web-development-fullstack-docker
     build: 
       context: .
     ports: 
