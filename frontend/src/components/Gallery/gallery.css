@@ -1,0 +1,68 @@
+@font-face {
+    font-family: 'Oranienbaum';
+    src: url('../../assets/fonts/Oranienbaum.ttf') format('truetype')
+}
+
+.gallery {
+    width: 94%;
+    max-width: 1600px; 
+    margin: 80px auto;
+    padding: 0px; 
+    border:4px solid black;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
+
+}
+
+.title-gallery {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Oranienbaum';
+    background: black;
+    color:white;
+    height:40px;
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+
+.galleryGrid {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    padding-left:2%;
+    padding-right: 2%;
+}
+
+.card {
+    width: calc(33.33% - 20px); 
+    margin-bottom: 20px; 
+}
+
+.card-details {
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .gallery {
+        border:none;
+        box-shadow: none;
+        width:100%;
+        border-radius:0px;
+    }
+
+    .galleryGrid {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .card {
+        width: calc(100% - 20px); 
+    }
+}
+
+
+
+
+

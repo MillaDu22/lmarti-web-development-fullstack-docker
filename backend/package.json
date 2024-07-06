@@ -1,0 +1,36 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Backend app web-developper Ludmilla MARTI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MillaDu22/lmarti-web-development-fullstack.git"
+  },
+  "keywords": [
+    "Backend",
+    "server",
+    "API"
+  ],
+  "author": "Ludmilla MARTI",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MillaDu22/lmarti-web-development-fullstack/issues"
+  },
+  "homepage": "https://github.com/MillaDu22/lmarti-web-development-fullstack#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.6.1",
+    "mongoose": "^8.3.4",
+    "multer": "^1.4.5-lts.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.1"
+  }
+}

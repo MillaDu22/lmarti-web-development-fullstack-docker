@@ -1,0 +1,146 @@
+@font-face {
+    font-family: 'Oranienbaum';
+    src: url('../../assets/fonts/Oranienbaum.ttf') format('truetype')
+}
+.section-competences {
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-competences {
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: center;
+    font-family: "Oranienbaum";
+    color:white;
+    font-weight: 700;
+    font-size: 25px;
+    margin-top: 50px;
+    margin-bottom: 0;
+    height:40px;
+    background:black;
+    width:100%;
+}
+
+.container-icons {
+    position: relative;
+    margin-top:0px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap:wrap;
+    animation: rotateIn 5s ease infinite;
+    align-items: center;
+    width:95%;
+    margin-left:auto;
+    margin-right: auto;
+    padding-top:10px;
+    padding-bottom: 10px;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    min-height:100px;
+}
+.container-name-icon {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+i {
+    width: 128px;
+    font-size:48px;
+    margin-bottom: 0px;
+    transition: transform 0.3s ease;
+}
+
+.name-icon {
+    font-family: 'Oranienbaum';
+    font-size:12px;
+    margin-top: 0;
+}
+
+@keyframes rotateIn {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+i:hover {
+    transform: scale(1.2);
+}
+
+.fa-html5 {
+    color:orange;
+}
+
+.fa-css3 {
+    color:blue;
+}
+
+.fa-sass {
+    color:purple;
+}
+
+.fa-js {
+    color:yellow;
+}
+
+.fa-react {
+    color:aqua;
+}
+
+.fa-node {
+    color:rgb(29, 174, 13);
+}
+
+.fa-figma {
+    color:purple;
+}
+
+.fa-slack {
+    color:darkturquoise;
+}
+
+.fa-bootstrap {
+    color:rgb(97, 56, 243);
+}
+
+.fa-npm {
+    color:red;
+}
+
+.fa-chart-column {
+    color:rgb(0, 193, 193);
+}
+
+.fa-file-word {
+    color:rgb(0, 123, 255);
+}
+
+.fa-file-excel {
+    color:rgb(7, 217, 7);
+}
+
+.fa-file-powerpoint {
+    color:orange;
+}
+@media screen and (max-width:768px) {
+    .container-icons {
+        width:96%;
+        padding-left:2%;
+        padding-right:2%;
+        text-align: center;
+    }
+    i {
+        font-size:24px;
+    }
+}

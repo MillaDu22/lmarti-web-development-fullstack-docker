@@ -1,0 +1,37 @@
+.container-mots-cles {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width:82%;
+    Padding-left:9%;
+    padding-right: 9%;
+}
+
+.motCle {
+    background:black;
+    border-radius: 15px;
+    color:white;
+    padding-left:4%;
+    padding-right:4%;
+    margin-right: 10px;
+    text-align: center;
+    font-family:'Oranienbaum';
+    font-size:14px;
+    line-height:20px;
+    font-weight:500;
+    position:relative;
+}
+
+@media screen and (max-width:768px) {
+    .container-mots-cles {
+        width:100%;
+        padding-left:9%;
+        padding-right: 0%;
+    }
+    
+    .motCle {
+        font-size:10px;
+        line-height:14.26px;
+    }
+}
