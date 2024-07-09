@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const cors = require('cors');
 
-const projectRoutes = require('./routes/project');
+/*const projectRoutes = require('./routes/project');
 const certificatRoutes = require('./routes/certificat');
 const cvRoutes = require('./routes/cv');
 const userRoutes = require('./routes/user');
@@ -15,7 +15,7 @@ const app = express();
 app.use(cors());
 
 // Middleware pour parser les requêtes JSON
-app.use(bodyParser.json());
+app.use(bodyParser.json());*/
 
 // Connexion à la base de données
 mongoose.connect('mongodb://localhost:27017/?', {
@@ -27,7 +27,7 @@ mongoose.connect('mongodb://localhost:27017/?', {
     console.error('Failed to connect to MongoDB', err);
 });
 
-// Définir les schémas
+// Définit les schémas
 const certificatdevSchema = new mongoose.Schema({
     id: { type: String, required: true },
     description: { type: String, required: true },
@@ -482,7 +482,7 @@ async function populateDB() {
 // Exécute la fonction pour peupler la base de données //
 populateDB();
 
-// Middleware pour autoriser les requêtes vers le dossier 'images'
+/*// Middleware pour autoriser les requêtes vers le dossier 'images'
 app.use('/images', express.static(path.join(__dirname, 'images')));
 
 // Routes
@@ -491,7 +491,7 @@ app.use('/api/certificat', certificatRoutes);
 app.use('/api/cv', cvRoutes);
 app.use('/api/auth', userRoutes);
 
-module.exports = app;
+module.exports = app;*/
 
 
 
