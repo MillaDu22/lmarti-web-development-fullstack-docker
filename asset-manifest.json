@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/lmarti-web-development-fullsatck-docker/static/css/main.593a7fde.css",
-    "main.js": "/lmarti-web-development-fullsatck-docker/static/js/main.9cc6dbd1.js",
-    "static/js/453.b6c0a6ba.chunk.js": "/lmarti-web-development-fullsatck-docker/static/js/453.b6c0a6ba.chunk.js",
-    "static/media/Oranienbaum.ttf": "/lmarti-web-development-fullsatck-docker/static/media/Oranienbaum.e5625604e9200634b240.ttf",
-    "static/media/Boheme Floral.ttf": "/lmarti-web-development-fullsatck-docker/static/media/Boheme Floral.0345ab604f426031d363.ttf",
-    "static/media/Cinzel-Regular.otf": "/lmarti-web-development-fullsatck-docker/static/media/Cinzel-Regular.f91baf6fe825a2549798.otf",
-    "static/media/britain-logo.webp": "/lmarti-web-development-fullsatck-docker/static/media/britain-logo.fcb245e4236a9c1de19e.webp",
-    "static/media/photo-moi.webp": "/lmarti-web-development-fullsatck-docker/static/media/photo-moi.91ef79723d60e8dfc21a.webp",
-    "index.html": "/lmarti-web-development-fullsatck-docker/index.html",
-    "static/media/chevron.webp": "/lmarti-web-development-fullsatck-docker/static/media/chevron.a38c37cf785688867be6.webp",
-    "main.593a7fde.css.map": "/lmarti-web-development-fullsatck-docker/static/css/main.593a7fde.css.map",
-    "main.9cc6dbd1.js.map": "/lmarti-web-development-fullsatck-docker/static/js/main.9cc6dbd1.js.map",
-    "453.b6c0a6ba.chunk.js.map": "/lmarti-web-development-fullsatck-docker/static/js/453.b6c0a6ba.chunk.js.map"
+    "main.css": "/lmarti-web-development-fullstack-docker/static/css/main.216b96a2.css",
+    "main.js": "/lmarti-web-development-fullstack-docker/static/js/main.5e53f1ed.js",
+    "static/js/453.b6c0a6ba.chunk.js": "/lmarti-web-development-fullstack-docker/static/js/453.b6c0a6ba.chunk.js",
+    "static/media/Oranienbaum.ttf": "/lmarti-web-development-fullstack-docker/static/media/Oranienbaum.e5625604e9200634b240.ttf",
+    "static/media/Boheme Floral.ttf": "/lmarti-web-development-fullstack-docker/static/media/Boheme Floral.0345ab604f426031d363.ttf",
+    "static/media/Cinzel-Regular.otf": "/lmarti-web-development-fullstack-docker/static/media/Cinzel-Regular.f91baf6fe825a2549798.otf",
+    "static/media/britain-logo.webp": "/lmarti-web-development-fullstack-docker/static/media/britain-logo.fcb245e4236a9c1de19e.webp",
+    "static/media/photo-moi.webp": "/lmarti-web-development-fullstack-docker/static/media/photo-moi.91ef79723d60e8dfc21a.webp",
+    "index.html": "/lmarti-web-development-fullstack-docker/index.html",
+    "static/media/chevron.webp": "/lmarti-web-development-fullstack-docker/static/media/chevron.a38c37cf785688867be6.webp",
+    "main.216b96a2.css.map": "/lmarti-web-development-fullstack-docker/static/css/main.216b96a2.css.map",
+    "main.5e53f1ed.js.map": "/lmarti-web-development-fullstack-docker/static/js/main.5e53f1ed.js.map",
+    "453.b6c0a6ba.chunk.js.map": "/lmarti-web-development-fullstack-docker/static/js/453.b6c0a6ba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.593a7fde.css",
-    "static/js/main.9cc6dbd1.js"
+    "static/css/main.216b96a2.css",
+    "static/js/main.5e53f1ed.js"
   ]
 }
