@@ -1,8 +1,8 @@
 {
-  "name": "lmarti-web-development-fullstack-docker",
+  "name": "lmarti-web-development-fullstack-docker-frontend",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://milladu22.github.io/lmarti-web-development-fullstack-docker/",
+  "homepage": "https://milladu22.github.io/lmarti-web-development-fullsatck-docker/",
   "dependencies": {
     "@react-pdf-viewer/core": "^3.12.0",
     "@react-pdf-viewer/default-layout": "^3.12.0",
@@ -22,7 +22,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
+      "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
