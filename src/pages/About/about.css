@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2? family= Montserrat:wght@400;500 & display=swap');
+.AProposPage {
+    background:white;
+    width:100%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top:0px;
+    padding-bottom:105px;
+}
+
+.box {
+    position: relative;
+    width:80%;
+    height:auto;
+    left:10%;
+    right:10%;
+    overflow: hidden;
+}
+
+.nav {
+    padding-right:7px;
+}
+
+.projets {
+    width:100%;
+}
+
+.projet {
+    width:100%;
+    line-height: 34px;
+}
+
+.titre-bar-moyennes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family:"oranienbaum";
+    font-size: 20px;
+    width:100%;
+    height:40px;
+    background: black;
+    color:white;
+}
+
+.container-skillbar {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left:3%;
+    padding-right: 3%;
+    width:70%;
+    box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    background-color: white;
+}
+
+@media  screen and (max-width: 768px){
+    .AProposPage {
+        padding-top: 0px;
+        padding-bottom: 40px;
+        width:100%;
+    }
+
+    .box {
+        width:100%;
+        left:0;
+        right:0;
+    }
+
+    .projet {
+        width:100%;
+        margin-left:-3% ;
+        margin-right: 3%;
+    }
+
+    .titre-bar-moyennes {
+        font-size:17px;
+    }
+    
+    .container-skillbar {
+        padding-top: 1%;
+        padding-bottom: 1%;
+        padding-left:3%;
+        padding-right: 3%;
+        width:94%;
+        border:none;
+        box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
+    }
+}

@@ -1,0 +1,400 @@
+openapi: 3.0.0
+info:
+  title: API Documentation
+  version: 1.0.0
+  description: This is the API documentation for my Express application dev ldlamti
+servers:
+  - url: http://localhost:3001/api
+components:
+  schemas:
+    Project:
+      type: object
+      required:
+        - id
+        - name
+        - informations
+        - description
+        - cover
+        - photos
+        - code
+        - site
+        - alt
+        - html
+        - css
+        - js
+      properties:
+        id:
+          type: string
+          description: The auto-generated id of the project
+        name:
+          type: string
+          description: The name of the project
+        informations:
+          type: string
+          description: Additional information about the project
+        description:
+          type: string
+          description: The detailed description of the project
+        cover:
+          type: array
+          items:
+            type: string
+          description: URLs of the cover images
+        photos:
+          type: array
+          items:
+            type: string
+          description: URLs of the photos
+        code:
+          type: array
+          items:
+            type: string
+          description: URLs of the code repositories
+        site:
+          type: array
+          items:
+            type: string
+          description: URLs of the live sites
+        alt:
+          type: string
+          description: Alternative text for the cover images
+        html:
+          type: number
+          description: HTML skill level
+        css:
+          type: number
+          description: CSS skill level
+        js:
+          type: number
+          description: JavaScript skill level
+    Certificat:
+      type: object
+      required:
+        - id
+        - description
+        - url
+      properties:
+        id:
+          type: string
+          description: The auto-generated id of the certificat
+        description:
+          type: string
+          description: The description of the certificat
+        url:
+          type: string
+          description: The URL of the certificat
+    Cv:
+      type: object
+      required:
+        - id
+        - title
+        - url
+      properties:
+        id:
+          type: string
+          description: The auto-generated id of the CV
+        title:
+          type: string
+          description: The title of the CV
+        url:
+          type: string
+          description: The URL of the CV
+    User:
+      type: object
+      required:
+        - username
+        - email
+        - password
+      properties:
+        username:
+          type: string
+          description: The username of the user
+        email:
+          type: string
+          description: The email of the user
+        password:
+          type: string
+          description: The password of the user
+tags:
+  - name: Projects
+    description: The projects managing API
+  - name: Certificats
+    description: The certificats managing API
+  - name: CVs
+    description: The CVs managing API
+  - name: Users
+    description: The user authentication API
+paths:
+  /project:
+    get:
+      summary: Returns the list of all the projects
+      tags: [Projects]
+      responses:
+        200:
+          description: The list of the projects
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Project'
+    post:
+      summary: Create a new project
+      tags: [Projects]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Project'
+      responses:
+        201:
+          description: The created project
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Project'
+  /project/{id}:
+    get:
+      summary: Get a project by ID
+      tags: [Projects]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: The project description by ID
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Project'
+        404:
+          description: Project not found
+    put:
+      summary: Update a project by ID
+      tags: [Projects]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Project'
+      responses:
+        200:
+          description: The updated project
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Project'
+        404:
+          description: Project not found
+    delete:
+      summary: Delete a project by ID
+      tags: [Projects]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: Project deleted successfully
+        404:
+          description: Project not found
+  /certificat:
+    get:
+      summary: Returns the list of all the certificats
+      tags: [Certificats]
+      responses:
+        200:
+          description: The list of the certificats
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Certificat'
+    post:
+      summary: Create a new certificat
+      tags: [Certificats]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Certificat'
+      responses:
+        201:
+          description: The created certificat
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Certificat'
+  /certificat/{id}:
+    get:
+      summary: Get a certificat by ID
+      tags: [Certificats]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: The certificat description by ID
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Certificat'
+        404:
+          description: Certificat not found
+    put:
+      summary: Update a certificat by ID
+      tags: [Certificats]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Certificat'
+      responses:
+        200:
+          description: The updated certificat
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Certificat'
+        404:
+          description: Certificat not found
+    delete:
+      summary: Delete a certificat by ID
+      tags: [Certificats]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: Certificat deleted successfully
+        404:
+          description: Certificat not found
+  /cv:
+    get:
+      summary: Returns the list of all the CVs
+      tags: [CVs]
+      responses:
+        200:
+          description: The list of the CVs
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Cv'
+    post:
+      summary: Create a new CV
+      tags: [CVs]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Cv'
+      responses:
+        201:
+          description: The created CV
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Cv'
+  /cv/{id}:
+    get:
+      summary: Get a CV by ID
+      tags: [CVs]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: The CV description by ID
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Cv'
+        404:
+          description: CV not found
+    put:
+      summary: Update a CV by ID
+      tags: [CVs]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Cv'
+      responses:
+        200:
+          description: The updated CV
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Cv'
+        404:
+          description: CV not found
+    delete:
+      summary: Delete a CV by ID
+      tags: [CVs]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: CV deleted successfully
+        404:
+          description: CV not found
+  /auth:
+    post:
+      summary: User authentication
+      tags: [Users]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        200:
+          description: User authenticated successfully
+        401:
+          description: Authentication failed

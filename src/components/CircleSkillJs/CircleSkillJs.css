@@ -1,0 +1,44 @@
+.circular-skill-bar {
+    width: 150px; 
+    height: 150px; 
+    position: relative;
+}
+
+.circle-background {
+    width: 100%;
+    height: 100%;
+    background-color: #ccc; 
+    border-radius: 50%;
+}
+
+.circle-progress {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.percentage-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.circular-skill-bar:hover,
+.circle-background:hover,
+.circle-progress:hover,
+.percentage-text:hover {
+    transform: scale(1.1); /* Effet de zoom au survol*/
+    opacity: 0.8; /* Réduction de l'opacité au survol*/
+}
+
+@media screen and (max-width: 768px) {
+    .titre-skill{
+        color:white;
+    }
+
+    .circle-background {
+        background-color: white; 
+    }
+}

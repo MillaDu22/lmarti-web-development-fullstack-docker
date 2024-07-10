@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@300&display=swap');
+
+.vertical-menu {
+    position: relative;
+	/*width: 5%;*/
+    height:100vh;
+    width:8%;
+    top: 50%;
+    left:0;
+	background: black;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+
+.vertical-nav {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.vertical-menu .vertical-nav .vertical-link {
+	color: black;
+	text-decoration: none;
+	transform: rotate(45deg);
+	margin: 20px;
+	padding: 5px 150px;
+	background:aqua;
+    font-size:16px;
+    font-family: 'Ysabeau SC', sans-serif;
+	transition: .3s all;
+}
+
+.vertical-menu .vertical-nav .vertical-link:hover {
+	color: aqua;
+	background: black;
+	font-weight: bolder;
+}
+
+.vertical-menu .vertical-nav .vertical-link:active {
+	color: aqua;
+	background: black;
+	font-weight: bolder;
+}

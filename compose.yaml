@@ -1,0 +1,10 @@
+services:
+  app:
+    image: image-lmarti-web-development-fullstack-docker-frontend
+    build:
+      context: .
+    container_name: container-lmarti-web-developement-fullstack-docker-frontend
+    ports: 
+      - 3000:3000
+    volumes:
+      - .:/lmarti-web-development-fullstack-docker/frontend

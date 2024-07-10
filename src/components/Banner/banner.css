@@ -1,0 +1,68 @@
+@font-face {
+    font-family: 'Oranienbaum';
+    src: url('../../assets/fonts/Oranienbaum.ttf') format('truetype')
+}
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background: white;
+    margin: 0 auto;
+    padding-left:25%;
+    padding-right:25%;
+    width: 50%;
+    height: 270px;
+    opacity: 0; /* Ajout d'une opacité initiale pour l'animation */
+    animation: fadeIn 1s forwards; /* Utilisation de l'animation fadeIn */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* Commence avec une opacité de 0 */
+        transform: translateY(-20px); /* Décalage vers le haut pour l'effet de fondu */
+    }
+    100% {
+        opacity: 1; /* Termine avec une opacité de 1 */
+        transform: translateY(0); /* Pas de décalage vertical */
+    }
+}
+
+.about-me {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 5px;
+    width: 60%;
+    height: 80%;
+}
+
+.txt-welcome, .txt-visit, .welcome {
+    font-family: 'Oranienbaum';
+    position: relative;
+    margin: 0px;
+    font-size: 22px;
+    transition: transform 0.3s ease;
+}
+
+.txt-welcome:hover, .txt-visit:hover, .welcome:hover {
+    transform: scale(1.1); /* Effectue un léger zoom au survol */
+}
+
+@media screen and (max-width: 768px) {
+    .banner {
+        min-height: 350px;
+        width:80%;
+        padding-left:10%;
+        padding-right:10%;
+        padding-top:10px;
+        margin-top: 0px;
+        padding-bottom:10px;
+    }
+
+    .welcome, .txt-visit, .txt-welcome {
+        text-align: center;
+        font-size: 19px;
+    }
+}
