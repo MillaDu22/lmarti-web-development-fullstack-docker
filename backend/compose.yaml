@@ -11,7 +11,7 @@ services:
     depends_on:
       - mongo
     #volumes:
-    # - .:/backend-ldla-dev
+    #- .:/lmarti-web-development-fullstack-docker/backend
 
   mongo:
     image: mongo
@@ -20,9 +20,6 @@ services:
       - "27017:27017"  
     volumes:
       - mongo-data:/data/db 
-    #environment:
-      #MONGO_INITDB_ROOT_USERNAME: root
-      #MONGO_INITDB_ROOT_PASSWORD: example
 
 volumes:
   mongo-data: ~

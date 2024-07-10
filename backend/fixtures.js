@@ -1,31 +1,9 @@
-const express = require('express');
 const mongoose = require('mongoose');
-const bodyParser = require('body-parser');
-const path = require('path');
-const cors = require('cors');
+require('dotenv').config();
+const username = process.env.USERNAME;
+const email = process.env.EMAIL;
+const password = process.env.PASSWORD;
 
-/*const projectRoutes = require('./routes/project');
-const certificatRoutes = require('./routes/certificat');
-const cvRoutes = require('./routes/cv');
-const userRoutes = require('./routes/user');
-
-const app = express();
-
-// Middleware CORS pour autoriser toutes les requêtes
-app.use(cors());
-
-// Middleware pour parser les requêtes JSON
-app.use(bodyParser.json());*/
-
-// Connexion à la base de données
-mongoose.connect('mongodb://localhost:27017/?', {
-   //useNewUrlParser: true,
-    //useUnifiedTopology: true
-}).then(() => {
-    console.log('Connected to MongoDB');
-}).catch(err => {
-    console.error('Failed to connect to MongoDB', err);
-});
 
 // Définit les schémas
 const certificatdevSchema = new mongoose.Schema({
@@ -67,12 +45,7 @@ const Cvdev = mongoose.model('Cvdev', cvdevSchema);
 const Projectdev = mongoose.model('Projectdev', projectdevSchema);
 const Userdev = mongoose.model('Userdev', userdevSchema);
 
-// Données à insérer //
-const usersData = [
-    { username: 'Ali', name: 'Alice', email: 'alice@example.com', password: 'password123' },
-    { username: 'Bobo', name: 'Bob', email: 'bob@example.com', password: 'password123' },
-    { username: 'Lili', name: 'Charlie', email: 'charlie@example.com', password: 'password123' },
-];
+const usersData = [{ username, email, password }];
 
 const certificatsData = [
     {
@@ -466,12 +439,15 @@ async function populateDB() {
         await Projectdev.deleteMany({});
         await Certificatdev.deleteMany({});
         await Cvdev.deleteMany({});
+        console.log('Les collections ont été vidées.');
+
         // Insere les nouvelles données //
         await Userdev.insertMany(usersData);
         await Certificatdev.insertMany(certificatsData);
         await Cvdev.insertMany(cvsData);
         await Projectdev.insertMany(projectsData);
         console.log('Data inserted successfully');
+
     } catch (error) {
         console.error('Error inserting data:', error);
     } finally {
@@ -482,16 +458,8 @@ async function populateDB() {
 // Exécute la fonction pour peupler la base de données //
 populateDB();
 
-/*// Middleware pour autoriser les requêtes vers le dossier 'images'
-app.use('/images', express.static(path.join(__dirname, 'images')));
+module.exports = { populateDB };
 
-// Routes
-app.use('/api/project', projectRoutes);
-app.use('/api/certificat', certificatRoutes);
-app.use('/api/cv', cvRoutes);
-app.use('/api/auth', userRoutes);
-
-module.exports = app;*/
 
 
 

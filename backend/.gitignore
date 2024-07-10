@@ -1,5 +1,11 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+# Ignore les fichiers .env (variables d'environnement)
+.env
+
+# Ignore les fichiers .env.* (variantes de variables d'environnement spécifiques à certains environnements)
+.env.*
+
 # dependencies
 /node_modules
 /.pnp

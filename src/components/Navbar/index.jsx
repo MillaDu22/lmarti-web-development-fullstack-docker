@@ -17,7 +17,6 @@ function Navbar() {
         try {
             const response = await axios.get('https://marti.alwaysdata.net/api/cv');
             setCvs(response.data);
-            console.log(response.data)
             if (response.data.length > 0) {
                 setUrl(response.data[0].url); 
             }
